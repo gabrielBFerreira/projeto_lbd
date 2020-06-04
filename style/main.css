@@ -1,0 +1,81 @@
+header{
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  top: 0;
+  left: 0;
+  background: #FFE373;
+}
+
+.recheio{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 250px;
+  margin-bottom: 100px;
+  width: 85%;
+  background-color: red;
+}
+
+.titulo{
+  font-family: Comic Sans MS;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.menu{
+  font-family: Comic Sans MS;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 100%;
+  text-align: center;
+  line-height: 47px;
+  background: #E9E23F;
+}
+
+.aviso_login{
+  position: absolute;
+  width: 165px;
+  height: 48px;
+  left: 18px;
+  top: 0px;
+  font-family: Comic Sans MS;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+  color: #000000;
+}
+
+.pesquisa{
+  position: absolute;
+  width: 200px;
+  height: 50%;
+  left: 1030px;
+  top: 25%;
+  border-style: none;
+  outline: none;
+  background: #FFFFFF;
+
+  /**lupa**/
+  background-image: url('../img/icon.png');
+  background-position: 100% 0%;
+  padding-left: 5px;
+  padding-right: 25px;
+  background-repeat: no-repeat;
+  background-size: 10% 100%;
+}
+
+footer{
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  left: 0px;
+  bottom: 0px;
+  text-align: center;
+  background: #FFE373;
+}
