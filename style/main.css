@@ -13,7 +13,9 @@ header{
   margin-top: 250px;
   margin-bottom: 100px;
   width: 85%;
-  background-color: red;
+  text-align: center;
+  font-family: Comic Sans MS;
+  
 }
 
 .titulo{
@@ -29,10 +31,9 @@ header{
   font-family: Comic Sans MS;
   position: absolute;
   width: 100%;
-  height: 30%;
   top: 100%;
   text-align: center;
-  line-height: 47px;
+  line-height: 50px;
   background: #E9E23F;
 }
 
@@ -73,9 +74,17 @@ header{
 footer{
   position: fixed;
   width: 100%;
-  height: 56px;
+  line-height: 50px;
   left: 0px;
   bottom: 0px;
   text-align: center;
   background: #FFE373;
+  font-family: Comic Sans MS;
+  font-size: 14px;
+}
+
+.imagem_inicio{
+  padding-top: 10px;
+  width: 223px;
+  height: 293px;
 }
