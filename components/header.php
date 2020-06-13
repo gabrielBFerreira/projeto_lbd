@@ -6,7 +6,7 @@
 
     <p class = "aviso_login">
    		Bem-vindo(a), Visitante.<br>
-   		<a href="#">Fazer Login</a> ou <a href="#">Cadastrar</a>.
+   		<a href="login.php">Fazer Login</a> ou <a href="#">Cadastrar</a>.
     </p>
     <div class="menu">
     Produtos | Carrinho | Área do Usuário

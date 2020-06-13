@@ -88,3 +88,53 @@ footer{
   width: 223px;
   height: 293px;
 }
+
+#fininho{
+  position: absolute;
+  width: 44.2188%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+
+  background-color: #E9E23F;
+
+}
+
+#fenomeno{
+  position: absolute;
+  width: 55.7813%;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  background-image: linear-gradient( rgb(247, 247, 88),white);
+  text-align: center;
+
+}
+.campo_form{
+  font-family: Comic Sans MS ;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 65px;
+  
+ 
+}
+#titulo{
+  position: absolute;
+width: 448px;
+height: 196px;
+left: 59px;
+top: 244px;
+
+font-family: Darker Grotesque;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 98px;
+text-align: center;
+
+color: #000000;
+  
+
+}
