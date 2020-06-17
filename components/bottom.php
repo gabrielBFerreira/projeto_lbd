@@ -1,4 +1,4 @@
 </div>
-<?php require('./components/footer.php'); ?>
+<?php require('components/footer.php'); ?>
 </body>
 </html>

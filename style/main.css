@@ -23,19 +23,19 @@ header{
   font-family: Comic Sans MS;
   font-style: normal;
   font-weight: normal;
-  font-size: 300%;
-  line-height: 150%;
+  font-size: 295%;
+  line-height: 98%;
   text-align: center;
 }
 
 .menu{
   font-family: Comic Sans MS;
-  font-size: 120%;
+  font-size: 100%;
   position: absolute;
   width: 100%;
   top: 100%;
   text-align: center;
-  line-height: 400%;
+  line-height: 350%;
   background: #E9E23F;
 }
 
@@ -75,7 +75,7 @@ header{
 footer{
   position: fixed;
   width: 100%;
-  line-height: 400%;
+  line-height: 350%;
   left: 0%;
   bottom: 0%;
   text-align: center;
@@ -175,4 +175,10 @@ footer{
   font-size: 120%;
   width: 25%;
   line-height: 140%;
+}
+
+.campo_produtos{
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
 }
