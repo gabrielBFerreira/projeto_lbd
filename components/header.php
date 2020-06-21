@@ -14,7 +14,7 @@
         ?>
     </p>
     <div class="menu">
-    <a href='catalago_produtos.php'>Produtos</a> | Carrinho | Área do Usuário
+    <a class='links_menu' href='catalogo_produtos.php'>Produtos</a> | <a class='links_menu' href='carrinho.php'>Carrinho</a> | <a class='links_menu' href='area_usuario.php'>Área do Usuário</a>
  
     <form method="get"action="#">
         <input type="text" class="pesquisa" placeholder="Pesquisar">

@@ -3,6 +3,8 @@
 
 	$id=$_GET["id"];
 
+	$quantidade = $_POST["quantidade"];
+
 	require"connection.php";
 
 	$sql = "SELECT * FROM produto where id=$id;";
@@ -18,8 +20,12 @@
 	}
 
 	$pedido[] = $linha;
+	//array_push($pedido, $quantidade);
+	
 	$_SESSION["produto_pedido"] = $pedido;
     
-    header("Location: ../carrinho.php");
+	header("Location: ../carrinho.php");
+	
+	
 
  ?>

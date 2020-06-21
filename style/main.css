@@ -7,6 +7,11 @@ header{
   background: #FFE373;
 }
 
+.links_menu {
+  text-decoration: none;
+  color: black;
+}
+
 .recheio{
   margin-left: auto;
   margin-right: auto;
