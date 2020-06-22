@@ -8,7 +8,7 @@
         <?php
             session_start();
             if (isset($_SESSION['login']))
-                echo "Bem-vindo(a),".$_SESSION['nome'].".<br><a href='logout.php'>Fazer Logout</a>.";
+                echo "Bem-vindo(a), ".$_SESSION['nome'].".<br><a href='logout.php'>Fazer Logout</a>.";
             else    
                 echo "Bem-vindo(a), Visitante.<br><a href='login.php'>Fazer Login</a> ou <a href='cad_cli.php'>Cadastrar</a>."
         ?>
