@@ -1,34 +1,40 @@
 <?php
     session_start();
  
-    $login = $_POST['login'];
+    $login = $_POST['email'];
     $senha = $_POST['senha'];
  
     require "connection.php";
     
-    $query_cliente = "select * from cliente where email = '$login' AND senha = '$senha';";
-    $query_admin = "select * from administrador where email = '$login' AND senha = '$senha';";
- 
-    $res1 = mysqli_query ($connection, $query_cliente);
-    $res2 = mysqli_query ($connection, $query_admin);
- 
-    if ($registro = mysqli_fetch_assoc($res1)){
+    $query_cliente = "select * from cliente where email = '$login' AND senha = PASSWORD('$senha');";
+    $query_admin = "select * from administrador where email = '$login' AND senha = PASSWORD('$senha');";
+    
+    $res_cliente = mysqli_query($connection, $query_cliente); 
+    $res_admin = mysqli_query($connection, $query_admin); 
+
+	if ($linha = mysqli_fetch_assoc($res_cliente)) {
         
         $_SESSION['logado'] = $login;
- 
-        header("Location: area_cliente.php");
+        $_SESSION['id'] = $linha["id"];
+        $_SESSION['nome'] = $linha["nome"];
+        $_SESSION['tipo'] = 'cliente';
         
-    } else if ($registro = mysqli_fetch_assoc($res2)){
- 
+        header("Location: ../area_usuario.php");
+
+    } elseif ($linha = mysqli_fetch_assoc($res_admin)) {
+        
         $_SESSION['logado'] = $login;
- 
-        header("Location: area_admin.php");
- 
+        $_SESSION['id'] = $linha["id"];
+        $_SESSION['nome'] = $linha["nome"];
+        $_SESSION['tipo'] = 'admin';
+
+        header("Location: ../area_usuario.php");
+
     } else {
- 
+        
         $_SESSION['mensagem'] = 'Acesso negado';
-    
+        
         header("Location: ../login.php");
-    
+
     }
 ?>

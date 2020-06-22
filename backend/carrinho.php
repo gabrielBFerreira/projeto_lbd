@@ -3,7 +3,7 @@
 
 	$id=$_GET["id"];
 
-	$quantidade = $_POST["quantidade"];
+	$quantidade = $_POST["qtd_prod"];
 
 	require"connection.php";
 
@@ -19,13 +19,10 @@
 		$pedido = $_SESSION["produto_pedido"];
 	}
 
+	$linha["quantidade"] = $quantidade;
 	$pedido[] = $linha;
-	//array_push($pedido, $quantidade);
 	
 	$_SESSION["produto_pedido"] = $pedido;
     
 	header("Location: ../carrinho.php");
-	
-	
-
  ?>
