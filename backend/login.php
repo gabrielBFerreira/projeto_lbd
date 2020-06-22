@@ -14,7 +14,7 @@
 
 	if ($linha = mysqli_fetch_assoc($res_cliente)) {
         
-        $_SESSION['logado'] = $login;
+        $_SESSION['login'] = $login;
         $_SESSION['id'] = $linha["id"];
         $_SESSION['nome'] = $linha["nome"];
         $_SESSION['tipo'] = 'cliente';
@@ -23,7 +23,7 @@
 
     } elseif ($linha = mysqli_fetch_assoc($res_admin)) {
         
-        $_SESSION['logado'] = $login;
+        $_SESSION['login'] = $login;
         $_SESSION['id'] = $linha["id"];
         $_SESSION['nome'] = $linha["nome"];
         $_SESSION['tipo'] = 'admin';
