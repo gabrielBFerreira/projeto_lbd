@@ -1,7 +1,7 @@
 <?php require('components/top.php'); ?>
 
 <?php
-require"backend/connection.php";
+	require "backend/connection.php";
 	$cmd = "SELECT * from produto ORDER BY id ASC";
 	$produtos = mysqli_query($connection,$cmd); 
 	while ($produto = mysqli_fetch_array($produtos)) { 
