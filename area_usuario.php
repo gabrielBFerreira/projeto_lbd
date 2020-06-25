@@ -55,8 +55,8 @@
             while ($produto = mysqli_fetch_array($res_produtos)) { 
                 echo "<br>";
     
-                echo "Código do produto: ".$produto["id"]."<br>";
                 echo "Nome: ".$produto["nome"];
+                echo "Código: ".$produto["id"]."<br>";
                 
                 echo "<br>";
             }
