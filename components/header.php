@@ -10,7 +10,7 @@
             if (isset($_SESSION['login']))
                 echo "Bem-vindo(a), ".$_SESSION['nome'].".<br><a href='backend/logout.php'>Fazer Logout</a>.";
             else    
-                echo "Bem-vindo(a), Visitante.<br><a href='login.php'>Fazer Login</a> ou <a href='cad_cli.php'>Cadastrar</a>."
+                echo "Bem-vindo(a), Visitante.<br><a href='login.php'>Fazer Login</a> ou <a href='cadastro_cliente.php'>Cadastrar</a>."
         ?>
     </p>
     <div class="menu">

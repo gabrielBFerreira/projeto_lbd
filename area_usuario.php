@@ -49,21 +49,26 @@
                 echo "<br>";
     
                 echo "Valor: R$ ".$pedido["valor_total"]."<br>";
+
+                echo "<br>";
             }
+            echo "<br>";
+            echo "<a href='cadastro_cliente.php' class='botao'>Alterar dados</a>";
+            echo "<a href='backend/excluir_usuario.php' class='botao'>Excluir perfil</a>";
         } else if ($_SESSION['tipo'] == 'admin') {
             echo "Produtos cadastrados:<br>";
             while ($produto = mysqli_fetch_array($res_produtos)) { 
                 echo "<br>";
     
-                echo "Nome: ".$produto["nome"];
+                echo "Nome: ".$produto["nome"]."<br>";
                 echo "Código: ".$produto["id"]."<br>";
                 
                 echo "<br>";
             }
+            echo "<br>";
+            echo "<a href='cadastro_produto.php' class='botao'>Cadastrar produto</a>";
+            echo "<a href='backend/excluir_usuario.php' class='botao'>Excluir perfil</a>";
         }
     ?>
-
-    <input type="reset" name="Alterar"  value="Alterar">
-    <input type="submit" name="Excluir"  value="Excluir">
 
 <?php require('components/bottom.php');?>

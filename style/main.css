@@ -148,10 +148,21 @@ footer{
 }
 
 .botao{
+  border:none;
+  margin:5px;
+  display:inline-block;
   position: relative;
   font-family: Comic Sans MS;
   font-size: 70%;
-  padding: 0.5% 5%;
+  padding: 0.5% 2.5%;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:lightgray;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap
 }
 
 #form_cadastro{
@@ -167,9 +178,20 @@ footer{
 }
 
 .botao_cadastro{
+  border:none;
+  display:inline-block;
+  position: relative;
   font-family: Comic Sans MS;
   padding: 0.5% 4.3%;
   font-size: 120%;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:lightgray;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap
 }
 
 .campo_cadastro{
