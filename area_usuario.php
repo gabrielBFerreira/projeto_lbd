@@ -15,7 +15,7 @@
         $res_produtos = mysqli_query($connection, $query_produtos);
     } else {
         $_SESSION['mensagem'] = 'Acesso negado';
-        header("Location: ../login.php");
+        header("Location: login.php");
     }
         $res = mysqli_query($connection, $query); 
         $usuario = mysqli_fetch_assoc($res);

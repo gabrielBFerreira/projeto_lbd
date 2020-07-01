@@ -127,9 +127,8 @@ footer{
 
 #titulo{
   position: absolute;
-  width: 50%;
-  left: 22%;
-  top: 30%;
+  left: 15%;
+  top: 17%;
   font-family: Comic Sans MS;
   font-style: normal;
   font-weight: normal;
@@ -142,7 +141,7 @@ footer{
 .form{
   position: relative;
   left: 0%;
-  top: 22%;
+  top: 8%;
   font-family: Comic Sans MS;
   font-size: 240%;
 }

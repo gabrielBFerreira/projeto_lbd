@@ -1,7 +1,10 @@
 <?php require('components/head.php'); ?>
 
 <div id ="fininho">
-    <p id="titulo">M. J. G. Instrumentos</p>
+    <p id="titulo">
+        M. J. G.<br>
+        Instrumentos
+    </p>
 </div>
 
 <div id ="fenomeno">

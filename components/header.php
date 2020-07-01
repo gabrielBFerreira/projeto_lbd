@@ -16,8 +16,8 @@
     <div class="menu">
     <a class='links_menu' href='catalogo_produtos.php'>Produtos</a> | <a class='links_menu' href='carrinho.php'>Carrinho</a> | <a class='links_menu' href='area_usuario.php'>Área do Usuário</a>
  
-    <form method="get"action="#">
-        <input type="text" class="pesquisa" placeholder="Pesquisar">
+    <form method="get"action="catalogo_produtos.php">
+        <input type="text" name="pesquisa" class="pesquisa" placeholder="Pesquisar">
     </form>
     </div>
     
