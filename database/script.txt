@@ -1,0 +1,83 @@
+create database loja_projeto_lbd;
+
+use loja_projeto_lbd;
+
+create table cliente (
+	id int auto_increment primary key,
+	nome varchar(100),
+	email varchar(75),
+	senha varchar(75)
+);
+
+create table administrador (
+	id int auto_increment primary key,
+	nome varchar(100),
+	email varchar(75),
+	senha varchar(75)
+);
+
+insert into administrador values (null, 'Gabriel', 'adm001@gmail.com', PASSWORD('123')), (null, 'Joao', 'adm002@gmail.com', PASSWORD('123')), (null,  'Marcus', 'adm003@gmail.com', PASSWORD('123'));
+
+create table telefone (
+	id int auto_increment primary key,
+	ddd varchar(3),
+	numero varchar(15),
+	cliente_id int,
+	administrador_id int,
+	foreign key (cliente_id) references cliente(id) on delete cascade,
+	foreign key (administrador_id) references administrador(id) on delete cascade
+);
+
+insert into telefone values (null, '015', '987654321', null, 1), (null, '015', '987654321', null, 2), (null, '015', '987654321', null, 3);
+
+create table endereco (
+	id int auto_increment primary key,
+	rua varchar(50),
+	cidade varchar(25),
+	estado varchar (25),
+	cliente_id int,
+	administrador_id int,
+	foreign key (cliente_id) references cliente(id) on delete cascade,
+	foreign key (administrador_id) references administrador(id) on delete cascade
+);
+
+insert into endereco values (null, 'Rua NTI, 359, Vl. Açafrão', 'Itapetininga', 'São Paulo', null, 1), (null, 'Rua NTI, 359, Vl. Açafrão', 'Itapetininga', 'São Paulo', null, 2), (null, 'Rua NTI, 359, Vl. Açafrão', 'Itapetininga', 'São Paulo', null, 3);
+
+create table categoria (
+	id int auto_increment primary key,
+	nome varchar(50)
+);
+
+insert into categoria values (null, 'Áudio'), (null, 'Teclas'), (null, 'Cordas'), (null, 'Bateria/percussão'), (null, 'Sopro');
+
+create table produto (
+	id int auto_increment primary key,
+	nome varchar(50),
+	descricao varchar(255),
+	preco decimal(6,2),
+	fabricante varchar(50),
+	foto varchar(255),
+	categoria_id int,
+	administrador_id int,
+	foreign key (categoria_id) references categoria(id) on delete cascade,
+	foreign key (administrador_id) references administrador(id) on delete cascade
+);
+
+insert into produto values (null, 'Guitarra Acústica', 'Guitarra acústica.', 749.99, 'Swagger', 'img/guitarra_acustica.jpg', 3, 1), (null, 'Saxofone', 'Um saxofone.', 549.99, 'Node', 'img/sax.jpg', 5, 2), (null, 'Violino', 'Pequeno violino.', 419.99, 'Stradivarius', 'img/violino.jpg', 3, 3);
+
+create table pedido (
+	id int auto_increment primary key,
+	data datetime,
+	valor_total decimal(6,2),
+	cliente_id int,
+	foreign key (cliente_id) references cliente(id) on delete cascade
+);
+
+create table produto_pedido (
+	id int auto_increment primary key,
+	quantidade int,
+	produto_id int,
+	pedido_id int,
+	foreign key (produto_id) references produto(id) on delete cascade,
+	foreign key (pedido_id) references pedido(id) on delete cascade
+);

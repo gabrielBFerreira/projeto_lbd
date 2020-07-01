@@ -17,9 +17,8 @@
     <input type="text" name="nome" class="campo_cadastro" required> <br><br>
     <input type="submit" value="Criar categoria" class = "botao_cadastro"><br><br>
 
-    <label for="categoria" class="label_cadastro">Selecionar categoria</label>
-    <select name="categoria">
-        <option value="">Selecione uma categoria</option>
+    <select name="categoria" id='categoria'>
+        <option value="">Selecionar categoria</option>
         <?php
             while($categoria = mysqli_fetch_array($result)) {
                 echo "<option value=".$categoria['id'].">".$categoria['nome']."</option>";
@@ -29,7 +28,6 @@
     <br>
     <br>
     <input type="submit" value="Alterar categoria" class = "botao_cadastro">
-    <input type="submit" name="Excluir Categoria"  value="Excluir Categoria" class = "botao_cadastro">
-
+    <a href='backend/excluir_categoria.php' class='botao_cadastro'>Excluir categoria</a>
 </form>
 <?php require('components/bottom.php');?>
